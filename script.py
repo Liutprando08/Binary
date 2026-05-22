@@ -39,9 +39,9 @@ class BinaryDownloader:
     def _create_directories(self):
         for platform_name, arches in self.platforms.items():
             for arch in arches:
-                (self.base_path / platform_name / arch / "ffmpeg").mkdir(parents=True, exist_ok=True)
+                if platform_name != "linux":
+                    (self.base_path / platform_name / arch / "ffmpeg").mkdir(parents=True, exist_ok=True)
                 (self.base_path / platform_name / arch / "bento4").mkdir(parents=True, exist_ok=True)
-                (self.base_path / platform_name / arch / "megatools").mkdir(parents=True, exist_ok=True)
                 (self.base_path / platform_name / arch / "shaka_packager").mkdir(parents=True, exist_ok=True)
 
     def _download(self, url: str, dest: Path) -> bool:
@@ -398,23 +398,6 @@ class BinaryDownloader:
 
                 print(f"{success}/{len(binaries)}")
 
-    def create_megatools_structure(self):
-        print("\n=== Megatools (manual) ===")
-
-        for platform_name, arches in self.platforms.items():
-            for arch in arches:
-                print(f"{platform_name}-{arch}: ", end="", flush=True)
-
-                target_dir = self.base_path / platform_name / arch / "megatools"
-                ext = ".exe" if platform_name == "windows" else ""
-                binary_name = f"megatools{ext}"
-
-                placeholder = target_dir / binary_name
-                placeholder.touch()
-
-                self._add_path(platform_name, arch, "megatools", binary_name)
-                print("placeholder created")
-
     def save_paths_json(self):
         json_path = Path("./binary_paths.json")
         with open(json_path, 'w') as f:
@@ -427,7 +410,6 @@ class BinaryDownloader:
         self.download_shaka_packager()
         self.download_dovi_tool()
         self.download_mkvtoolnix()
-        self.create_megatools_structure()
         self.save_paths_json()
 
 if __name__ == "__main__":
