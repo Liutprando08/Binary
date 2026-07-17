@@ -110,5 +110,23 @@
   ],
   "linux_arm64_velora": [
     "linux/arm64/velora/velora"
+  ],
+  "linux_x64_aria2c": [
+    "linux/x64/aria2c/aria2c"
+  ],
+  "linux_arm64_aria2c": [
+    "linux/arm64/aria2c/aria2c"
+  ],
+  "darwin_x64_aria2c": [
+    "darwin/x64/aria2c/aria2c"
+  ],
+  "darwin_arm64_aria2c": [
+    "darwin/arm64/aria2c/aria2c"
+  ],
+  "windows_x64_aria2c": [
+    "windows/x64/aria2c/aria2c.exe"
+  ],
+  "windows_x86_aria2c": [
+    "windows/x86/aria2c/aria2c.exe"
   ]
 }
