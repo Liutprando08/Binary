@@ -129,7 +129,7 @@
   "windows_x86_aria2c": [
     "windows/x86/aria2c/aria2c.exe"
   ],
-  "windows_x64_N_m3u8dl": [
+  "windows_x64_n_m3u8dl": [
     "windows/x64/N_m3u8dl/N_m3u8DL-RE.exe"
   ]
 }
