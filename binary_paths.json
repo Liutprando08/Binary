@@ -131,5 +131,14 @@
   ],
   "windows_x64_n_m3u8dl": [
     "windows/x64/N_m3u8dl/N_m3u8DL-RE.exe"
+  ],
+  "windows_arm64_n_m3u8dl": [
+    "windows/arm64/N_m3u8dl/N_m3u8DL-RE.exe"
+  ],
+  "linux_x64_n_m3u8dl": [
+    "linux/x64/N_m3u8dl/N_m3u8DL-RE"
+  ],
+  "linux_arm64_n_m3u8dl": [
+    "linux/arm64/N_m3u8dl/N_m3u8DL-RE"
   ]
 }
