@@ -140,5 +140,11 @@
   ],
   "linux_arm64_n_m3u8dl": [
     "linux/arm64/N_m3u8dl/N_m3u8DL-RE"
+  ],
+  "darwin_x64_n_m3u8dl": [
+    "darwin/x64/N_m3u8dl/N_m3u8DL-RE"
+  ],
+  "darwin_arm64_n_m3u8dl": [
+    "darwin/arm64/N_m3u8dl/N_m3u8DL-RE"
   ]
 }
